@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sources":[],"sourcesContent":[],"names":[],"mappings":""}
+{"version":3,"file":"index.js","sources":["../src/js/dummy-api.js"],"sourcesContent":["import axios from 'axios';\naxios.defaults.baseURL = 'https://dummyjson.com/recipes';\n\nexport async function getAllRecipes() {\n  const { data } = await axios.get();\n  return data;\n}\n\nexport async function getRecipesById(id) {\n  const { data } = await axios.get(`/${id}`);\n  return data;\n}\n"],"names":["axios"],"mappings":"svBACAA,EAAM,SAAS,QAAU"}
